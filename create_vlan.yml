@@ -1,12 +1,12 @@
 - name: Create VLAN
-  hosts: bigips
+  hosts: localhost
   connection: local
  
   tasks:
       - name: Create VLAN
         bigip_vlan:
             state: "present"
-            server: "{{ local_bigip }}"
+            server: "10.128.1.11"
             user: "admin"
             password: "admin"
             name: "ansible_vlan"
