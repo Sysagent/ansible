@@ -1,5 +1,5 @@
 - name: Create VLAN
-  hosts: localhost
+  hosts: bigips
   connection: local
  
   tasks:
