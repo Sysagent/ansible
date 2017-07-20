@@ -6,7 +6,7 @@
       - name: Create VLAN
         bigip_vlan:
             state: "present"
-            server: "172.32.0.102"
+            server: "{{ local_bigip }}"
             user: "admin"
             password: "admin"
             name: "ansible_vlan"
