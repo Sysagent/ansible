@@ -1,0 +1,14 @@
+- name: Create VLAN
+  hosts: bigips
+  connection: local
+ 
+  tasks:
+      - name: Create VLAN
+        bigip_vlan:
+            state: "present"
+            server: "172.32.0.102"
+            user: "admin"
+            password: "admin"
+            name: "ansible_vlan"
+            untagged_interfaces: "1.2"
+            validate_certs: "no"
