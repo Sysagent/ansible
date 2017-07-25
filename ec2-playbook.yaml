@@ -14,7 +14,7 @@
       disable_rollback: true
       template_url: "https://s3-eu-west-1.amazonaws.com/dualbigips3/f5-existing-stack-bigiq-1nic-bigip.template"
       template_parameters:
-        bigipExternalSecurityGroup: "sg-c5d917bd"
+        bigipExternalSecurityGroup: "sg-f3d8168b"
         bigiqPasswordS3Arn: "arn:aws:s3:::dualbigips/bigiq-thing"
         Vpc: "vpc-e5f05e82"
         bigiqLicensePoolName: "aws_lic_pool"
