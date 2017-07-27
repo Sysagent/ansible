@@ -18,7 +18,7 @@
         bigiqPasswordS3Arn: "arn:aws:s3:::dualbigips/bigiq-thing"
         Vpc: "vpc-e5f05e82"
         bigiqLicensePoolName: "aws_lic_pool"
-        bigiqAddress: "10.0.0.70"
+        bigiqAddress: "10.0.0.234"
         sshKey: "Amazon Key Pair For Demos"
         subnet1Az1: "subnet-281fbc4f"
         bigiqUsername: "admin"
