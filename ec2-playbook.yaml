@@ -10,7 +10,7 @@
       state: "present"
       ec2_access_key: "{{ ec2_access_key }}"
       ec2_secret_key: "{{ ec2_secret_key }}"
-      region: "eu-west-1b"
+      region: "eu-west-1"
       disable_rollback: true
       template_url: "https://s3-eu-west-1.amazonaws.com/dualbigips3/f5-existing-stack-bigiq-1nic-bigip.template"
       template_parameters:
