@@ -1,0 +1,26 @@
+- name: Provision ec2 instances based on the environment
+  hosts: localhost
+  connection: local
+  gather_facts: False
+ 
+  tasks:
+  - name: launch ansible cloudformation example
+    cloudformation:
+      stack_name: "ansible-cloudformation-f5"
+      state: "present"
+      ec2_access_key: "{{ ec2_access_key }}"
+      ec2_secret_key: "{{ ec2_secret_key }}"
+      region: "eu-west-1"
+      disable_rollback: true
+      template_url: "https://github.com/F5Networks/f5-aws-cloudformation/blob/master/supported/cluster/2nic/same-az-ha/f5-existing-stack-same-az-cluster-bigiq-2nic-bigip.template"
+      template_parameters:
+        bigipExternalSecurityGroup: "sg-f3d8168b"
+        bigiqPasswordS3Arn: "arn:aws:s3:::bigiq-bucket/bigiq"
+        Vpc: "vpc-e5f05e82"
+        bigiqLicensePoolName: "aws_lic_pool"
+        bigiqAddress: "10.0.0.87"
+        sshKey: "Amazon Key Pair For Demos"
+        subnet1Az1: "subnet-281fbc4f"
+        bigiqUsername: "admin"
+      tags:
+        Stack: "ansible-f5-cloudformation"
