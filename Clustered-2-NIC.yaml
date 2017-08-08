@@ -14,9 +14,12 @@
       disable_rollback: true
       template_url: "https://s3-eu-west-1.amazonaws.com/dualbigips3/f5-existing-stack-same-az-cluster-bigiq-2nic-bigip.template"
       template_parameters:
-        bigipExternalSecurityGroup: "sg-f3d8168b"
-        bigiqPasswordS3Arn: "arn:aws:s3:::bigiq-bucket/bigiq"
         Vpc: "vpc-e5f05e82"
+        managementSubnetAz1: "subnet-281fbc4f"
+        bigipManagementSecurityGroup: "sg-f3d8168b"
+        subnet1Az1: "subnet-cd1ebdaa"
+        bigipExternalSecurityGroup: "sg-51eb2529"
+        bigiqPasswordS3Arn: "arn:aws:s3:::bigiq-bucket/bigiq"
         bigiqLicensePoolName: "aws_lic_pool"
         bigiqAddress: "10.0.0.87"
         sshKey: "Amazon Key Pair For Demos"
